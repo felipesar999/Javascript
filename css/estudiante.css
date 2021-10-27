@@ -1,0 +1,151 @@
+:root{
+    --color-nombre:
+}
+
+body {
+  max-width: 1500px;
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1.2fr 0.9fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Names"
+    "Activity"
+    "Totals";
+    padding: 1rem;
+    background-color: chartreuse;
+}
+
+.Names {
+  display: grid;
+  grid-template-columns: 1.3fr 0.4fr;
+  grid-template-rows: 0.6fr 1.4fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Names_name Names_Imagen"
+    "Names_Enlaces Names_Imagen";
+  grid-area: Names;
+  background-color: blue;
+}
+
+.Names_Enlaces {
+  grid-area: Names_Enlaces;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background-color:rgb(178, 124, 228);
+}
+
+.Names_Enlaces_data {
+  padding-top: 1rem;
+}
+
+.Names_Imagen {
+  grid-area: Names_Imagen;
+  border-color: rgb(45, 45, 48);
+}
+
+.Names_name {
+  grid-area: Names_name;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1rem;
+}
+
+.Activity {
+  display: grid;
+  grid-template-columns: 1.5fr 0.8fr 0.7fr;
+  grid-template-rows: 1fr 1.2fr 0.9fr 0.9fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Activity_title Activity_title Activity_title"
+    "Activity_datas Activity_datas Activity_datas"
+    "Activity_datas Activity_datas Activity_datas"
+    "Activity_datas Activity_datas Activity_datas";
+  grid-area: Activity;
+  background-color: cornsilk;
+}
+
+.Activity_title {
+  display: grid;
+  grid-template-columns: 1.6fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: ".";
+  grid-area: Activity_title;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.Activity_datas {
+  display: grid;
+  grid-template-columns: 0.5fr 1.8fr 0.9fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "Activity_data_items Activity_data_names Activity_data_UX Activity_data_devs";
+  grid-area: Activity_datas;
+}
+
+.Activity_data_items {
+  grid-area: Activity_data_items;
+}
+
+.Activity_data_names {
+  grid-area: Activity_data_names;
+}
+
+.Activity_data_UX {
+  grid-area: Activity_data_UX;
+}
+
+.Activity_data_devs {
+  grid-area: Activity_data_devs;
+}
+
+.Totals {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "Totals_estado1 Totals_estado2 Totals_estado3 Totals_estado4 Totals_estado5 Totals_estado6";
+  grid-area: Totals;
+}
+
+.Totals_estado1 {
+  grid-area: Totals_estado1;
+}
+
+.Totals_estado2 {
+  grid-area: Totals_estado2;
+}
+
+.Totals_estado3 {
+  grid-area: Totals_estado3;
+}
+
+.Totals_estado4 {
+  grid-area: Totals_estado4;
+}
+
+.Totals_estado5 {
+  grid-area: Totals_estado5;
+}
+
+.Totals_estado6 {
+  grid-area: Totals_estado6;
+}
