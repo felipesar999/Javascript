@@ -2,6 +2,12 @@
     --color-nombre:
 }
 
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: content-box;
+}
+
 body {
   max-width: 1500px;
   display: flex;
@@ -10,34 +16,31 @@ body {
 }
 
 .main {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1.2fr 0.9fr 1fr;
+  display: flex;
+  flex-direction: column;
   gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "Names"
-    "Activity"
-    "Totals";
     padding: 1rem;
     background-color: chartreuse;
 }
 
 .Names {
-  display: grid;
-  grid-template-columns: 1.3fr 0.4fr;
-  grid-template-rows: 0.6fr 1.4fr;
+  display: flex;
+  flex-direction: row;
   gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "Names_name Names_Imagen"
-    "Names_Enlaces Names_Imagen";
-  grid-area: Names;
   background-color: blue;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.Names_name_order{
+  display: flex;
+  flex-direction: column;
+  width: 75%;
 }
 
 .Names_Enlaces {
-  grid-area: Names_Enlaces;
+  width: 27rem;
   display: flex;
   flex-direction: column;
   padding: 1rem;
@@ -45,16 +48,22 @@ body {
 }
 
 .Names_Enlaces_data {
-  padding-top: 1rem;
+  padding-top: 0.8rem;
+  font-size: 1.2rem;
+}
+
+.Names_Imagen_Img{
+  width: 30%;
+  align-items: center;
+  justify-content: center;
+  
 }
 
 .Names_Imagen {
-  grid-area: Names_Imagen;
-  border-color: rgb(45, 45, 48);
+  border-color: rgb(194, 194, 204);
 }
 
 .Names_name {
-  grid-area: Names_name;
   color: white;
   display: flex;
   align-items: center;
@@ -63,18 +72,14 @@ body {
 }
 
 .Activity {
-  display: grid;
-  grid-template-columns: 1.5fr 0.8fr 0.7fr;
-  grid-template-rows: 1fr 1.2fr 0.9fr 0.9fr;
+  display: flex;
   gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "Activity_title Activity_title Activity_title"
-    "Activity_datas Activity_datas Activity_datas"
-    "Activity_datas Activity_datas Activity_datas"
-    "Activity_datas Activity_datas Activity_datas";
   grid-area: Activity;
-  background-color: cornsilk;
+  background-color: rgb(219, 214, 214);
+  
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .Activity_title {
@@ -125,6 +130,13 @@ body {
   grid-template-areas: "Totals_estado1 Totals_estado2 Totals_estado3 Totals_estado4 Totals_estado5 Totals_estado6";
   grid-area: Totals;
 }
+
+.body_choose_banking_data_icon_data_data{
+  width: 80%;
+  column-gap: 5rem;
+  padding: 0px 12px;
+}
+
 
 .Totals_estado1 {
   grid-area: Totals_estado1;
