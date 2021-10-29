@@ -5,17 +5,18 @@
 * {
   padding: 0px;
   margin: 0px;
-  box-sizing: content-box;
+  box-sizing: border-box;
 }
 
 body {
-  max-width: 1500px;
   display: flex;
   justify-content: center;
   font-size: 16px;
 }
 
 .main {
+  max-width: 2500px;
+  width: 90vw;
   display: flex;
   flex-direction: column;
   gap: 0px 0px;
@@ -40,7 +41,7 @@ body {
 }
 
 .Names_Enlaces {
-  width: 27rem;
+  width: 100%;
   display: flex;
   flex-direction: column;
   padding: 1rem;
@@ -53,9 +54,11 @@ body {
 }
 
 .Names_Imagen_Img{
-  width: 30%;
+  width: 25%;
   align-items: center;
   justify-content: center;
+  object-fit: contain;
+  margin-left: 0.5rem;
   
 }
 
@@ -73,91 +76,56 @@ body {
 
 .Activity {
   display: flex;
-  gap: 0px 0px;
-  grid-area: Activity;
-  background-color: rgb(219, 214, 214);
-  
+  background-color: rgb(219, 214, 214);  
   padding: 1rem;
   border-radius: 1rem;
   margin-bottom: 0.5rem;
 }
-
-.Activity_title {
-  display: grid;
-  grid-template-columns: 1.6fr;
-  grid-template-rows: 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas: ".";
-  grid-area: Activity_title;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+.tabla {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
 }
 
-.Activity_datas {
-  display: grid;
-  grid-template-columns: 0.5fr 1.8fr 0.9fr 1fr;
-  grid-template-rows: 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas: "Activity_data_items Activity_data_names Activity_data_UX Activity_data_devs";
-  grid-area: Activity_datas;
+.tabla tr {
+  border-bottom: dotted green 0.5px;
 }
 
-.Activity_data_items {
-  grid-area: Activity_data_items;
+.tabla td, .tabla th {
+  padding: 8px;
 }
 
-.Activity_data_names {
-  grid-area: Activity_data_names;
-}
-
-.Activity_data_UX {
-  grid-area: Activity_data_UX;
-}
-
-.Activity_data_devs {
-  grid-area: Activity_data_devs;
+.tabla_title{
+  margin-bottom: 100px;
 }
 
 .Totals {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas: "Totals_estado1 Totals_estado2 Totals_estado3 Totals_estado4 Totals_estado5 Totals_estado6";
-  grid-area: Totals;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(255, 126, 148);
+  padding: 13px 20px;
+  border-radius: 8px;
+}
+
+.Totals .button {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  background-color: green;
+  border: solid .1em rgb(0, 78, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+}
+
+.Totals .button span {
+  color: white;
+  margin-bottom: 5px;
 }
 
 .body_choose_banking_data_icon_data_data{
   width: 80%;
   column-gap: 5rem;
   padding: 0px 12px;
-}
-
-
-.Totals_estado1 {
-  grid-area: Totals_estado1;
-}
-
-.Totals_estado2 {
-  grid-area: Totals_estado2;
-}
-
-.Totals_estado3 {
-  grid-area: Totals_estado3;
-}
-
-.Totals_estado4 {
-  grid-area: Totals_estado4;
-}
-
-.Totals_estado5 {
-  grid-area: Totals_estado5;
-}
-
-.Totals_estado6 {
-  grid-area: Totals_estado6;
 }
