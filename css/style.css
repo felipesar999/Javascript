@@ -1,5 +1,8 @@
 :root{
-    --color-nombre:
+    --color-colorppal  :#FFBF86;
+    --color-colorback:#297F87;
+    --color-letterppal:#270bc2;
+    --color-color-backl:#FF5151
 }
 
 * {
@@ -21,14 +24,14 @@ body {
   flex-direction: column;
   gap: 0px 0px;
     padding: 1rem;
-    background-color: chartreuse;
+    background-color: var(--color-colorback);
 }
 
 .Names {
   display: flex;
   flex-direction: row;
   gap: 0px 0px;
-  background-color: blue;
+  background-color: var(--color-colorppal);
   padding: 1rem;
   border-radius: 1rem;
   margin-bottom: 0.5rem;
@@ -63,11 +66,11 @@ body {
 }
 
 .Names_Imagen {
-  border-color: rgb(194, 194, 204);
+  border-color: black
 }
 
 .Names_name {
-  color: white;
+  color: var(--color-letterppal);
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -76,7 +79,7 @@ body {
 
 .Activity {
   display: flex;
-  background-color: rgb(219, 214, 214);  
+  background-color: var(--color-colorppal); 
   padding: 1rem;
   border-radius: 1rem;
   margin-bottom: 0.5rem;
@@ -102,7 +105,7 @@ body {
 .Totals {
   display: flex;
   justify-content: space-between;
-  background-color: rgb(255, 126, 148);
+  background-color: var(--color-colorppal);
   padding: 13px 20px;
   border-radius: 8px;
 }
@@ -120,7 +123,7 @@ body {
 }
 
 .Totals .button span {
-  color: white;
+  color: var(--color-letterppal);
   margin-bottom: 5px;
 }
 
