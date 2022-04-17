@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Primer HTML</title>
+  </head>
+  <body>
+    <h3>Fundamientos JavaScript</h3>
+    <script>
+          var hola = "Hola Mundo"
+          //console.log(hola)
+          if (hola !== "Hi"){
+              let a = "Error"
+          }
+
+          //propiedad windows define todas las propiedades de una ventana
+          //console.log(window)
+
+          //clase 5, cadenas de texto
+          console.log("Quinta Clase 'Cadenas' \n")
+          let nombre = "Felipe"
+          console.log(nombre)
+          let apellido = 'Zapata'
+          let saludo = new String("Hola Mundo");
+
+          //concatenacion
+          let nombreCompleto = "\nHola mi nombre es " + nombre + " " + apellido + "\n"
+          let lorem = "     lorem ipsum, lorem"
+
+
+          //let unir = nombre + apellido + saludo
+          console.log(nombre, apellido, saludo)
+          console.log(nombre.length, apellido.length, saludo.length)
+
+          console.log(
+              nombre.toUpperCase(),
+              apellido.toLowerCase(),
+              nombre,
+              nombreCompleto,
+              //palabra incluida en la cadena de caracteres, retorna bool
+              lorem.includes("ipsum"),
+              lorem.includes("nota"),
+              //trim borra espacios
+              lorem.trim(),
+              //crear un arreglo con la cadena, dentro del parentesis, donde se separa el texto
+              lorem.split(","),
+              "\n"
+              )
+
+              console.log("Sexta Clase 'Templates' e interpolacion\n")
+              let nombreEsposa = "Marcela"
+              let apellidoEsposa = 'Zapata'
+              let nombreCompletoEsposa = `Hola mi nombre es ${nombreEsposa} ${apellidoEsposa}`
+
+
+              console.log(nombreCompletoEsposa +
+              "\n")
+
+              let ul = 
+                `
+                <ul>
+                    <li>Verano</li>
+                    <li>Otoño</li>
+                    <li>Invierno</li>
+                    <li>Primavera</li>
+                </ul>
+                `
+                console.log(ul,"\n")
+
+
+                console.log("Septima Clase 'Numeros'\n")
+
+                console.log("Decima Clase 'Arreglos'\n")
+
+                const arreglo = []
+                const arreglo2 = ["carro",1,"casa","beca"]
+
+                console.log(arreglo,arreglo2,arreglo2.length)
+
+
+                
+
+                arrNum = [10,20,30,40,50,60,70,80,90,100]
+
+                let prueba
+
+                for (const key in arrNum) {
+                  if (arrNum.hasOwnProperty.call(arrNum, key)) {
+                    const element = arrNum[key];
+                    console.log(`El indice es ${key} y el valor es ${arrNum[key]}`)
+
+                    prueba = 0
+                    // porque no me funciona
+                    prueba = (arrNum[key] = 60) ? "numero" : " otro numero" 
+                    console.log (prueba)
+                  }
+                }
+
+                console.log("Clase 'Destructuracion'\n")
+
+                console.log("'Destructuracion Array'\n")
+                arrayDestructurar = ["Vida Familia","Comprar nueva Casa","Comprar nuevo Carro"," Terminar Estudio"," Descansar en Finca"]
+                const [Familia,Casa,Carro,Estudio,Finca] = arrayDestructurar
+                console.log(`Mi vida es ${Familia} , ${Casa} , ${Carro} , ${Estudio} , ${Finca}`)
+
+                console.log("'Destructuracion JSON'\n")
+                personal = {
+                  nombre1 : "Felipe",
+                  apellido1 : "Zapata",
+                  edad : 36,
+                  hobbies : ["tv familia","play", "futbol", "Viajar Carro"],
+                }
+                const{nombre1,apellido1,edad,hobbies} = personal
+                console.log(`Mis datos son ${nombre1} , ${apellido1} , ${edad} , ${hobbies}`)
+
+                console.log("Clase 'Objetos Literales'\n")
+
+                let nombre2 = "zeus",
+                    edad2 = 6;
+
+                const zeus = {
+                  nombre: nombre2,
+                  edad: edad2,
+                  ladrar: function () {
+                    console.log("Miauuu")
+                  }
+                }
+
+                console.log(`Nuestra mascota es ${zeus.nombre} , edad ${zeus.edad} , y hace ${zeus.ladrar()}`)
+                zeus.ladrar()
+
+                const cat = {
+                  nombre2,
+                  edad2,
+                  raza :"callejero",
+                  ladrar() {
+                    console.log("Miauuu Miauu")
+                  }
+                }
+                console.log(cat)
+                cat.ladrar()
+
+                console.log("Clase 'Parametros REST y Operador Spread'\n")
+
+                console.log("Rest")
+                function sumar (a,b,...c){
+                  let resultado = a + b;
+
+                  c.forEach(function (n){
+                    resultado += n
+                  })
+
+                  return resultado
+                }
+
+                console.log(sumar(1,2))
+                console.log(sumar(1,2,3))
+                console.log(sumar(1,2,3,4))
+
+                console.log("Spread Operator")
+
+
+
+ 
+                
+                
+
+                
+
+                
+
+
+
+
+
+
+                
+    </script>
+  </body>
+</html>

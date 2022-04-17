@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Primer HTML</title>
+  </head>
+  <body>
+    <h3>Fundamientos JavaScript</h3>
+    <h3>Arrow Functions</h3>
+    <script>
+      // funcion expresada
+      const saludar = function () {
+        console.log(`Hola Saludar`);
+      };
+
+      // funcion declarada -- Clae funciones
+      function salud() {
+        console.log(`Hola Salud`);
+      }
+
+      //funciones Arrow Function
+      const saludarrow = () => {
+        console.log(`Hola Arrow Funciont Normal`);
+      };
+
+      const saludarrowsincor = () =>
+        console.log(`Hola Arrow Funciont Sin Corchetes`);
+
+      //con parametros
+      const saludarrowparam = (nombre) =>
+        console.log(`Hola Arrow Funciont con parametros ${nombre}`);
+
+      //al tener un parametros no necesita parentesis
+      const saludarrowparamsinpar = (apellido) =>
+        console.log(`Hola Arrow Funciont con parametros ${apellido}`);
+
+      //al tener varios parametros necesita parentesis
+      const saludarrowparamconpare = (nombre, apellido) =>
+        console.log(
+          `Hola Arrow Funciont con parametros ${nombre} y ${apellido}`
+        );
+
+      //Return
+      const sumar = (a, b) => a + b;
+
+      //return varias lineas
+      const sumarvar = (a, b) => {
+        a += 2;
+        console.log(a);
+        b *= 2;
+        console.log(b);
+        console.log(a * b);
+        return a * b;
+      };
+
+      const numeros = [1, 2, 3, 4, 5, 6];
+
+      saludar();
+      salud();
+      saludarrow();
+      saludarrowsincor();
+      saludarrowparam("pispa");
+      saludarrowparam("Zapata");
+      saludarrowparamconpare("Pispa", "Fernandez");
+      console.log(sumar(9, 9));
+      sumarvar(1, 2);
+
+      //foreach con funcion normal
+      /*
+      numeros.forEach(function (ele, index){
+        console.log(`el elemento ${ele} esta en la posicion ${index}`)
+      })
+      */
+
+      //foreach con arrow funcion
+      numeros.forEach((ele, index) => {
+        console.log(`el elemento ${ele} esta en la posicion ${index}`);
+      });
+
+      //arrow function trabaja sobre el contexto global
+
+      const perro = {
+        nombre: "Kenai",
+        dog: function perro() {
+          console.log(this);
+        },
+      };
+
+      perro.dog();
+
+      const cat = {
+        nombre: "Zeus",
+        maullar: () => {
+          console.log(this);
+        },
+      };
+
+      cat.maullar();
+
+
+    </script>
+  </body>
+</html>

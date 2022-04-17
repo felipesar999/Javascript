@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Primer HTML</title>
+  </head>
+  <body>
+    <h3>Fundamientos JavaScript</h3>
+    <h3>Prototipos</h3>
+    <script>
+      /*
+      POO
+        Clases - Modelo a seguir
+        Objetos - Es una instancia de una clase
+          Atributos - Es una caracteristica o propiedad del objeto (variables dentro de un objeto)
+          Metodos - Acciones que un objeto puede realizar (Son funciones dentro de un objeto)
+      */
+
+      //objeto
+
+      /*
+      const animal = {
+        nombre:"Snoopy",
+        sonar() {
+          console.log("Hago sonidos porque estoy vivo")
+        }
+      }
+
+      const animal2 = {
+        nombre:"Lola Bunny",
+        sonar() {
+          console.log("Hago sonidos porque estoy vivo")
+        }
+      }
+
+      console.log(animal)
+      console.log(animal2)
+    */
+
+    //Funcion constructuro
+    function Animal (nombre,genero) {
+      //Atributos
+      this.nombre = nombre
+      this.genero = genero
+
+      //Metodos
+      this.sonar = function () {
+        console.log("Hago sonidos porque estoy vivo")
+      }
+    }
+
+    const snoopy = new Animal("Snoopy","Macho"),
+      lolaBunny = new Animal("LolaBunny","Hembra")
+
+      console.log(snoopy)
+      console.log(lolaBunny)
+
+    
+
+
+    </script>
+  </body>
+</html>

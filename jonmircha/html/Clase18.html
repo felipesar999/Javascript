@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Primer HTML</title>
+  </head>
+  <body>
+    <h3>Fundamientos JavaScript</h3>
+    <script>
+          
+
+                console.log("Clase 'Destructuracion'\n")
+
+                console.log("'Destructuracion Array'\n")
+                arrayDestructurar = ["Vida Familia","Comprar nueva Casa","Comprar nuevo Carro"," Terminar Estudio"," Descansar en Finca"]
+                const [Familia,Casa,Carro,Estudio,Finca] = arrayDestructurar
+                console.log(`Mi vida es ${Familia} , ${Casa} , ${Carro} , ${Estudio} , ${Finca}`)
+
+                console.log("'Destructuracion JSON'\n")
+                personal = {
+                  nombre1 : "Felipe",
+                  apellido1 : "Zapata",
+                  edad : 36,
+                  hobbies : ["tv familia","play", "futbol", "Viajar Carro"],
+                }
+                const{nombre1,apellido1,edad,hobbies} = personal
+                console.log(`Mis datos son ${nombre1} , ${apellido1} , ${edad} , ${hobbies}`)
+
+                                
+    </script>
+  </body>
+</html>
