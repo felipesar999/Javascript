@@ -8,9 +8,59 @@
   </head>
   <body>
     <h3>Fundamientos JavaScript</h3>
-    <h3>Clases</h3>
+    <h3>Herencia Prototipica</h3>
     <script>
-      
+      function Animal(nombre, genero) {
+        //Atributos
+        this.nombre = nombre;
+        this.genero = genero;
+      }
+
+      //Metodos agregados al prototipo de la funcion contructora
+      Animal.prototype.sonar = function () {
+        console.log("Hago sonidos porque estoy vivo");
+      };
+
+      Animal.prototype.saludar = function () {
+        console.log(`soy ${this.nombre} y mi genero es ${this.genero}`);
+      };
+
+      //Herencia prototipica
+      function Perro (nombre, genero, tamanio){
+        this.super = Animal
+        this.super(nombre,genero)
+        this.tamanio = tamanio
+      }
+
+      //Perro esta heredando de animal
+      Perro.prototype = new Animal();
+      Perro.prototype.constructor = Perro;
+
+      //sobreescribir de metodos de Prototipo padre en el hijo
+
+      Perro.prototype.sonar = function () {
+        console.log("Soy un perro y mi sonido es ladrido")
+      }
+
+      Perro.prototype.ladrar = function () {
+        console.log("Guau Guau")
+      }
+
+      const garfield = new Animal("Garfield", "Macho"),
+        BogsBunny = new Animal("BogsBunny", "Macho"),
+        Snoopy = new Perro("Snoopy","Macho","Mediano")
+
+
+      console.log(garfield);
+      console.log(BogsBunny);
+      console.log(Snoopy);
+
+      garfield.saludar();
+      BogsBunny.saludar();
+      garfield.sonar();
+      Snoopy.sonar();
+      Snoopy.saludar()
+      Snoopy.ladrar()
 
 
     </script>

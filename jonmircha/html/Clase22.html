@@ -39,7 +39,8 @@
       console.log(animal2)
     */
 
-    //Funcion constructuro
+    //Funcion constructura
+    console.log("Forma 1 --  Metodos en la funcion")
     function Animal (nombre,genero) {
       //Atributos
       this.nombre = nombre
@@ -49,6 +50,10 @@
       this.sonar = function () {
         console.log("Hago sonidos porque estoy vivo")
       }
+
+      this.saludar = function (){
+        console.log(`soy ${this.nombre} y mi genero es ${this.genero}`)
+      }
     }
 
     const snoopy = new Animal("Snoopy","Macho"),
@@ -56,6 +61,35 @@
 
       console.log(snoopy)
       console.log(lolaBunny)
+      snoopy.saludar()
+      lolaBunny.saludar()
+
+      console.log("\n\n\nForma 2 --- Metodos en el prototipo")
+
+
+      function Animal2 (nombre,genero) {
+      //Atributos
+      this.nombre = nombre
+      this.genero = genero
+
+    }
+    
+    //Metodos agregados al prototipo de la funcion contructora
+    Animal2.prototype.sonar = function () {
+      console.log("Hago sonidos porque estoy vivo")
+    }
+
+    Animal2.prototype.saludar = function (){
+      console.log(`soy ${this.nombre} y mi genero es ${this.genero}`)
+    }
+
+    const garfield = new Animal2("Garfield","Macho"),
+      BogsBunny = new Animal2("BogsBunny","Macho")
+
+      console.log(garfield)
+      console.log(BogsBunny)
+      garfield.saludar()
+      BogsBunny.saludar()
 
     
 

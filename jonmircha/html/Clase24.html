@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Primer HTML</title>
+  </head>
+  <body>
+    <h3>Fundamientos JavaScript</h3>
+    <h3>Clases y Herencias</h3>
+    <script>
+      //Funcion constructura
+      console.log("Forma 1 --  Metodos en la funcion");
+      class Animal {
+        constructor(nombre, genero) {
+          //Atributos
+          this.nombre = nombre;
+          this.genero = genero;
+        }
+        //Metodos
+        sonar() {
+          console.log("Hago sonidos porque estoy vivo");
+        }
+
+        saludar() {
+          console.log(`soy ${this.nombre} y mi genero es ${this.genero}`);
+        }
+      }
+
+      //Herencia Funcion Constructora
+
+      class Perro extends Animal {
+        constructor(nombre, genero, tamanio) {
+          //super metodo que manda llamar el constructor de la clase padre
+          super(nombre, genero);
+          this.tamamio = tamanio;
+        }
+        sonar() {
+          console.log("Soy un perro y mi sonido es ladrido");
+        }
+        ladrar() {
+          console.log("Guau,Guau");
+        }
+      }
+
+      const mimi = new Animal("Mimi", "Hembra")
+        Scooby = new Perro("Scooby", "Macho", "Gigante");
+
+      console.log(mimi,Scooby);
+      mimi.saludar();
+      Scooby.saludar();
+      mimi.sonar();
+      Scooby.sonar();
+    </script>
+  </body>
+</html>
