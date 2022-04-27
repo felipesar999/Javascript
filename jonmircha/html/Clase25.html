@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Primer HTML</title>
+</head>
+
+<body>
+  <h3>Fundamientos JavaScript</h3>
+  <h3>Metodos Estaticos, getters y setters</h3>
+  <script>
+
+    //Funcion constructura
+    console.log("Forma 1 --  Metodos en la funcion");
+    class Animal {
+      constructor(nombre, genero) {
+        //Atributos
+        this.nombre = nombre;
+        this.genero = genero;
+      }
+      //Metodos
+      sonar() {
+        console.log("Hago sonidos porque estoy vivo");
+      }
+
+      saludar() {
+        console.log(`soy ${this.nombre} y mi genero es ${this.genero}`);
+      }
+    }
+
+    //Herencia Funcion Constructora
+
+
+    class Perro extends Animal {
+      constructor(nombre, genero, tamanio) {
+        //super metodo que manda llamar el constructor de la clase padre
+        super(nombre, genero);
+        this.tamamio = tamanio;
+        this.raza = null
+      }
+      sonar() {
+        console.log("Soy un perro y mi sonido es ladrido");
+      }
+      ladrar() {
+        console.log("Guau,Guau");
+      }
+
+      //metodo estatico
+      //se puede instanciar sin instanciar la clase
+      static queeres() {
+        console.log("Los perros son animales mamiferos caninos")
+      }
+      //los setters y getters son metodos especiales que nos permiten establecer y obtener los valores de atributos de nuestra clase
+      get getRaza(){
+        return this.raza;
+      } 
+
+      set setRaza(raza){
+        this.raza = raza;
+      }    
+    }
+
+
+
+
+    const mimi = new Animal("Mimi", "Hembra")
+    Scooby = new Perro("Scooby", "Macho", "Gigante");
+
+    console.log(mimi, Scooby);
+    mimi.saludar();
+    Scooby.saludar();
+    mimi.sonar();
+    Scooby.sonar();
+    Perro.queeres()
+    
+    //error
+    //Scooby.setRaza("Gran Danes")
+    Scooby.setRaza = "Gran Danes"
+    console.log(Scooby.getRaza);
+
+
+  </script>
+</body>
+
+</html>

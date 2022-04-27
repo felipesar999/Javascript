@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Primer HTML</title>
+</head>
+
+<body>
+  <h3>Fundamientos JavaScript</h3>
+  <h3>Expresiones Regulares</h3>
+  <script>
+
+/*son una secuencia de caracteres que forma un patron de busqueda,
+principalmente utilizada para busqueda de patrones de cadenas de 
+caracteres 
+
+
+
+*/
+let cadena = "lorem Reprehenderit anim tdempor occaecat enim pariatur id commodo. Magna nisi nisi esse aute esse minim voluptate amet elit duis Lorem dolore tempor. Nisi dolore esse ut consectetur amet consequat enim irure veniam ipsum. Officia occaecat eiusmod veniam deserunt consectetur proident dolor consequat esse labore mollit elit. Culpa dolor irure exercitation anim velit enim culpa labore occaecat mollit proident mollit duis consequat. Veniam eiusmod ut culpa sunt fugiat laborum laborum elit. Fugiat fugiat cepteur dolore et ipsum non magna. Proident ad Lorem occaecat labore reprehenderit reprehenderit proident tempor tempor. Voluptate officia sint eiusmod quis. Et mollit eiusmod consectetur occaecat. Eiusmod dolor qui sit exercitation qui laboris magna ex in. Dolore ipsum ipsum dolore ex fugiat culpa eu. Velit nostrud fugiat duis laboris magna ad nisi veniam officia. Commodo laboris ipsum incididunt consequat cupidatat nisi irure enim id laborum consequat. Irure duis ex nulla non incididunt laborum. Deserunt excepteur esse culpa veniam mollit deserunt ex duis in velit deserunt deserunt. "
+
+
+// con el constructor
+let expReg = new RegExp(("ex","ig"))
+
+//expresion regularmente utilizada
+let expReg2 = /lorem/i;
+let expReg3 = /\d/i;
+
+// verificar si la expresion esta en la cadena
+console.log(expReg2.test(cadena))
+
+//devuelve arreglo en la exec
+console.log(expReg2.exec(cadena))
+
+
+  </script>
+</body>
+
+</html>

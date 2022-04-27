@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Primer HTML</title>
+</head>
+
+<body>
+  <h3>Fundamientos JavaScript</h3>
+  <h3>Objeto Console</h3>
+  <script>
+
+    //Objeto Console
+    console.log(console)
+    console.error("Esto es un error")
+    console.warn("Esto es un aviso")
+    console.info("Consola de Informacion")
+
+    let nombre = "Felipe",
+      apellido = "Zapata",
+      edad = "35"
+
+    console.log(nombre, apellido, edad)
+    console.log(`Hola mi nombre es ${nombre} ${apellido} y tengo ${edad}`)
+
+    console.log(`Hola mi nombre es %s %s y tengo %d`, nombre, apellido, edad)
+
+    //limpia la consola
+    console.clear()
+
+    //ver el documento en html
+    console.log(document)
+    console.dir(document)
+    console.clear()
+
+    //agrupar los datos en la consola
+    console.group("Cursos de @jonMircha en youtube");
+    console.log("Curso de Javascript")
+    console.log("Curso de NodeJs")
+    console.log("Curso de Progresive Web Apps")
+    console.log("Curso de Diseño y programacion Web")
+    console.groupEnd
+
+    console.clear()
+
+    //en tabla los datos
+    console.log(console)
+    console.table(Object.entries(console))
+
+    const numeros = [1, 2, 3, 4, 5],
+      vocales = ["a", "e", "i", "o", "u"]
+    console.table(numeros)
+    console.table(vocales)
+
+    const michi = {
+      perro: "si",
+      raza: "callejero",
+      color: "rojo"
+    }
+
+    console.table(michi)
+
+    console.clear()
+
+    //para saber cuanto tiempo tarda nuestro codigo en ejecucion
+    console.time("cuanto tiempo tarda mi codigo")
+    const arreglo = Array(1000000)
+
+    for (let i = 0; i < arreglo.length; i++) {
+      arreglo[i] = i;
+
+    }
+
+    console.timeEnd("cuanto tiempo tarda mi codigo")
+    //console.log(arreglo)
+    console.clear()
+
+    //cuenta cuantas veces sucede un evento console.count
+    for (let i = 0; i <= 100; i++) {
+      console.count("codigo for")
+      console.log(i)
+    }
+    console.countReset("codigo for")
+
+    console.clear()
+
+    //libreria de revision de ejecucion
+
+    let x = 3,
+    y = 2
+    pruebaXY ="Se espera que X siempre sea menor que Y"
+
+    console.assert(x < y ,{x,y,pruebaXY})
+
+
+
+
+
+
+
+
+
+  </script>
+</body>
+
+</html>

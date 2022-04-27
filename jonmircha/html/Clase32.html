@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Primer HTML</title>
+</head>
+
+<body>
+  <h3>Fundamientos JavaScript</h3>
+  <h3>Funciones anonimas autoejecutables</h3>
+  <script>
+
+    //funcion anonima autoejecutable
+
+
+
+    //forma convencional
+    (function () {
+      //obligatorio ; en este codigo
+      console.log("Mi primer IIFE - Inmediatly invoke function executable")
+    })();
+
+    (function (d,w,c) {
+      //obligatorio ; en este codigo
+      console.log("Mi segunda IIFE - Inmediatly invoke function executable")
+      console.log(d)
+      c.log(w)
+      c.log(c)
+    })(document,window,console);
+
+    //forma crockford
+    ((function (co){
+      co.log("version crockford")
+    })(console));
+
+    //forma crockford
+    +(function (una){
+      una.log("version unaria")
+    })(console);
+
+    //forma facebook
+    !(function (fa){
+      fa.log("version facebook")
+    })(console);
+
+
+
+
+
+
+  </script>
+</body>
+
+</html>

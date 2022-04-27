@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Primer HTML</title>
+</head>
+
+<body>
+  <h3>Fundamientos JavaScript</h3>
+  <h3>Objeto Date</h3>
+  <script>
+
+console.log(Date())
+
+    let fecha = new Date()
+    console.log(fecha)
+
+    //dia del mes
+    console.log(fecha.getDate())
+    
+    //dia de la semana D L M M J V S
+    //Empiesa Domingo --> 0
+    console.log(fecha.getDay())
+
+    //MES EN FEB MAR ABR MAR JUN JUL AG SEPT OCT NOV DEC
+    //empieza EN --> 0
+    console.log(fecha.getMonth())
+
+    //Año
+    console.log(fecha.getFullYear() )
+
+    //Hora
+    console.log(fecha.getHours())
+
+    //Minutos
+    console.log(fecha.getMinutes())
+
+    //Segundos
+    console.log(fecha.getSeconds())
+
+    //MiliSegundos
+    console.log(fecha.getMilliseconds())
+
+    //Texto
+    console.log(fecha.toString())
+
+    //Texto Dato
+    console.log(fecha.toDateString())
+
+    //hora y fecha local
+    console.log(fecha.toLocaleString())
+
+    //fecha local
+    console.log(fecha.toLocaleDateString())
+
+    //Hora local
+    console.log(fecha.toLocaleTimeString())
+
+    //Uso horario en minutos (-5 horas bogota) * 60
+    console.log(fecha.getTimezoneOffset())
+
+    //Fecha Londres
+    console.log(fecha.getUTCDate())
+
+    //Hora Londres
+    console.log(fecha.getUTCHours())
+
+    //segundos - desde 1 ene 1970 ahora
+    console.log(Date.now())
+
+    let cumpleFeli = new Date (1985,8,30)
+    console.log(cumpleFeli)
+
+
+
+
+
+
+    //libreria moment js
+    
+
+  </script>
+</body>
+
+</html>
