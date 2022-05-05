@@ -53,6 +53,8 @@ pali === revertir(pali)
 
 
 //EJERCICIO 4
+
+/*
 const eliminarCaracter = (texto ="" , patron ="") => 
   (!texto)
   ? console.warn("No ingresaste un texto")
@@ -63,6 +65,13 @@ const eliminarCaracter = (texto ="" , patron ="") =>
 eliminarCaracter()
 eliminarCaracter("xyz1,xyz2,Xyz3,xyZ4,XYZ5")
 eliminarCaracter("xyz1,xyz2,Xyz3,xyZ4,XYZ5","xyz")
+*/
+let arr = ["a",2]
+console.log(arr)
+delete arr[1]
 
+console.log(arr.length)
+console.log(arr)
+console.log("pruba")
 
 
