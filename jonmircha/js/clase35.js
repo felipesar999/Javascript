@@ -66,12 +66,5 @@ eliminarCaracter()
 eliminarCaracter("xyz1,xyz2,Xyz3,xyZ4,XYZ5")
 eliminarCaracter("xyz1,xyz2,Xyz3,xyZ4,XYZ5","xyz")
 */
-let arr = ["a",2]
-console.log(arr)
-delete arr[1]
-
-console.log(arr.length)
-console.log(arr)
-console.log("pruba")
 
 
