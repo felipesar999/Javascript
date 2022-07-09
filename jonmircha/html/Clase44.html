@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Primer HTML</title>
+</head>
+
+<body>
+  <h3>Fundamientos JavaScript</h3>
+  <h3>Ejercicios Practicos clase 44</h3>
+  <h2>Ejercicio 44 Temporizadores Timeout and TimeInterval</h2>
+  <script>
+    console.log("inicio")
+    // tiempo en milisegundos
+
+    let temporizador = setTimeout(() => {
+      console.log("Ejecutando un set TimeOut, Esto se ejecuta una sola vez")
+    }, 2000);
+
+    let temporizadorInterval = setInterval(() => {
+      console.log(new Date().toLocaleTimeString());
+    }, 1);
+
+    //como cancelar estas funciones
+    clearTimeout(temporizador)
+    clearInterval(temporizadorInterval)
+
+    console.log("fin")
+  </script>
+</body>
+
+</html>
