@@ -12,8 +12,6 @@
   <h3>Fundamientos JavaScript</h3>
   <h2>Ejercicio 47 Promesas</h2>
   <script>
-    console.log("test")
-
     function cuadradoPromise(value) {
       if(typeof value !== "number")
         {return Promise.reject("Error ")}
@@ -27,7 +25,7 @@
       })
     }
 
-   cuadradoPromise("a")
+   cuadradoPromise(0)
     .then(obj=>{
       console.log(`Inicia Promise`)
       console.log(`Promise ${obj.value}, ${obj.result}`)
